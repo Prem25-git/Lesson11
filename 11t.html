@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function removeEgg(foods){
+        const reversefood = foods.reverse();
+        const  res = [];
+        let eggsremoved = 0;
+        for (let i = 0 ;i <reversefood.length; i++){
+          if (reversefood[i]==='egg' && eggsremoved<2){
+            eggsremoved++;
+            continue;
+          }
+          res.push(reversefood[i]);
+
+        }
+        return res.reverse();
+      }
+      console.log(removeEgg(['egg','apple','egg','egg','ham']));
+      
+    </script>
+  </body>
+</html>
